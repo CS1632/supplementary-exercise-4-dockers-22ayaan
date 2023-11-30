@@ -76,7 +76,7 @@ public class D3Test {
     driver.findElement(By.xpath("//a[contains(@href, '/')]")).click();
     WebElement element = driver.findElement(By.xpath("//img[@alt='Old Deuteronomy']"));
     String attribute = element.getAttribute("src");
-    assertEquals("http://localhost:8080images/cat2.jpg", attribute);
+    assertEquals("http://localhost:8080/images/cat2.jpg", attribute);
   }
 
   @Test
@@ -164,7 +164,7 @@ public class D3Test {
 
   @Test
   public void tEST11GREETACATWITHNAME() {
-    driver.get("http://localhost:8080greet-a-cat/Jennyanydots");
+    driver.get("http://localhost:8080/greet-a-cat/Jennyanydots");
     assertThat(driver.findElement(By.xpath("//div[@id=\'greeting\']/h4")).getText(), is("Meow! from Jennyanydots."));
   }
 }
